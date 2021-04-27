@@ -1,0 +1,54 @@
+﻿<Window x:Class="Сalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Сalculator"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Сalculator" Height="450" Width="300" ResizeMode="NoResize" >
+    <Grid x:Name="MainLabel" Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="69.6"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.ColumnSpan="5" Foreground="#dbdbdb"  VerticalAlignment="Bottom" FontSize="30"  x:Name="textLabel"/>
+        <Button Grid.Column="0" Grid.Row="4" FontSize="20" FontWeight="Medium" BorderBrush="#292929" Background="#292929" Foreground="Wheat" HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignFloatingActionButton}" Click="NumberClick1">1</Button>
+        <Button Grid.Column="1" Grid.Row="4" FontSize="20" FontWeight="Medium" BorderBrush="#292929" Background="#292929" Foreground="Wheat" HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignFloatingActionButton}" Click="NumberClick2">2</Button>
+        <Button Grid.Column="2" Grid.Row="4" FontSize="20" FontWeight="Medium" BorderBrush="#292929" Background="#292929" Foreground="Wheat" HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignFloatingActionButton}" Click="NumberClick3">3</Button>
+        <Button Grid.Column="0" Grid.Row="3" FontSize="20" FontWeight="Medium" BorderBrush="#292929" Background="#292929" Foreground="Wheat" HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignFloatingActionButton}" Click="NumberClick4">4</Button>
+        <Button Grid.Column="1" Grid.Row="3" FontSize="20" FontWeight="Medium" BorderBrush="#292929" Background="#292929" Foreground="Wheat" HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignFloatingActionButton}" Click="NumberClick5">5</Button>
+        <Button Grid.Column="2" Grid.Row="3" FontSize="20" FontWeight="Medium" BorderBrush="#292929" Background="#292929" Foreground="Wheat" HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignFloatingActionButton}" Click="NumberClick6">6</Button>
+        <Button Grid.Column="0" Grid.Row="2" FontSize="20" FontWeight="Medium" BorderBrush="#292929" Background="#292929" Foreground="Wheat" HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignFloatingActionButton}" Click="NumberClick7">7</Button>
+        <Button Grid.Column="1" Grid.Row="2" FontSize="20" FontWeight="Medium" BorderBrush="#292929" Background="#292929" Foreground="Wheat" HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignFloatingActionButton}" Click="NumberClick8">8</Button>
+        <Button Grid.Column="2" Grid.Row="2" FontSize="20" FontWeight="Medium" BorderBrush="#292929" Background="#292929" Foreground="Wheat" HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignFloatingActionButton}" Click="NumberClick9">9</Button>
+        <Border BorderBrush="Black" Name="MyBorder"  
+            Background="#292929"  
+            CornerRadius="25"
+            BorderThickness="10"
+            Grid.Row="5" Grid.ColumnSpan="2">
+            <Button
+                Height="{Binding MyBorder.Height}" 
+                Content="0" Background="Transparent" BorderBrush="Black" Margin="0,-5,-1,-5" Click="NumberClick0"/>
+        </Border>
+        <Button Grid.Column="2" Grid.Row="5" FontSize="20" FontWeight="Medium" BorderBrush="#292929" Background="#292929" Foreground="Wheat" HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignFloatingActionButton}" Click="VirguleClick">,</Button>
+        <Button Grid.Column="5" Grid.Row="5" FontSize="20" BorderBrush="#ff921f" FontWeight="Medium" Background="#ff921f" Foreground="Wheat" HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignFloatingActionButton}" Click="EgaleClick">=</Button>
+        <Button Grid.Column="4" Grid.Row="4" FontSize="20" BorderBrush="#ff921f" FontWeight="Medium" Background="#ff921f" Foreground="Wheat" HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignFloatingActionButton}" Click="PlusClick">+</Button>
+        <Button Grid.Column="4" Grid.Row="3" FontSize="20" BorderBrush="#ff921f" FontWeight="Medium" Background="#ff921f" Foreground="Wheat" HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignFloatingActionButton}" Click="MinusClick">-</Button>
+        <Button Grid.Column="4" Grid.Row="2" BorderBrush="#ff921f" FontSize="20" FontWeight="Medium" Background="#ff921f" Foreground="Wheat" HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignFloatingActionButton}" Click="MultiplyClick">*</Button>
+        <Button Grid.Column="4" Grid.Row="1" BorderBrush="#ff921f" FontSize="20" FontWeight="Medium" Background="#ff921f" Foreground="Wheat" HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignFloatingActionButton}" Click="DivideClick">/</Button>
+        <Button Grid.Column="0" Grid.Row="1" BorderBrush="#9e9d9d" FontSize="20" FontWeight="Medium" Background="#9e9d9d" Foreground="Black" HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignFloatingActionButton}" Click="ButtonAC">AC</Button>
+        <Button Grid.Column="2" Grid.Row="1" BorderBrush="#9e9d9d" FontSize="20" FontWeight="Medium" Background="#9e9d9d" Foreground="Black" HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignFloatingActionButton}" Click="PercentageClick">%</Button>
+        <Button Grid.Column="1" Grid.Row="1" BorderBrush="#9e9d9d" FontSize="20" FontWeight="Medium" Background="#9e9d9d" Foreground="Black" HorizontalAlignment="Center" Style="{DynamicResource MaterialDesignFloatingActionButton}" Click="PlusOrMinus">+/-</Button>
+    </Grid>
+</Window>
