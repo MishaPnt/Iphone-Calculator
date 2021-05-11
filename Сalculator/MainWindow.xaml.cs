@@ -22,11 +22,11 @@ namespace Сalculator
     /// </summary>
     public partial class MainWindow : Window
     {
-        string input = string.Empty;
-        string operand1 = string.Empty;
-        string operand2 = string.Empty;
-        char operation;
-        double result = 0.0;
+       private string input = string.Empty;
+       private string operand1 = string.Empty;
+       private string operand2 = string.Empty;
+       private char operation;
+       private double result = 0.0;
         public MainWindow()
         {
             InitializeComponent();
@@ -111,9 +111,8 @@ namespace Сalculator
 
         private void PercentageClick(object sender, RoutedEventArgs e)
         {
-            decimal percentage;
-            decimal.TryParse(operand1, out percentage);
-            decimal iphone = (percentage / 100);
+            double percentage = double.Parse(textLabel.Text);
+            double iphone = (percentage / 100);
             textLabel.Text = iphone.ToString();
         }
 
@@ -190,9 +189,19 @@ namespace Сalculator
 
         private void PlusOrMinus(object sender, RoutedEventArgs e)
         {
-            textLabel.Text = "";
-            input += "0";
-            textLabel.Text += input;
+            double minuOPlus = double.Parse(textLabel.Text);
+
+            if (operation >0)
+            {
+                textLabel.Text = "";
+                minuOPlus *= -1;
+            }
+            else
+            {
+                textLabel.Text = "";
+                minuOPlus *= 1;
+            }
+            textLabel.Text += Convert.ToString(minuOPlus);
         }
     }
 }
